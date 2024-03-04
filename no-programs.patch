@@ -1,0 +1,49 @@
+diff -up ark-23.04.0/plugins/clirarplugin/CMakeLists.txt.orig ark-23.04.0/plugins/clirarplugin/CMakeLists.txt
+--- ark-23.04.0/plugins/clirarplugin/CMakeLists.txt.orig	2023-04-12 18:14:03.000000000 +0200
++++ ark-23.04.0/plugins/clirarplugin/CMakeLists.txt	2023-04-21 14:18:32.206159901 +0200
+@@ -17,17 +17,3 @@ set(SUPPORTED_ARK_MIMETYPES "${SUPPORTED
+ kerfuffle_add_plugin(kerfuffle_clirar ${kerfuffle_clirar_SRCS})
+ 
+ set(INSTALLED_KERFUFFLE_PLUGINS "${INSTALLED_KERFUFFLE_PLUGINS}kerfuffle_clirar;" PARENT_SCOPE)
+-
+-find_program(UNRAR unrar)
+-if(UNRAR)
+-    message(STATUS "Found unrar executable: ${UNRAR}")
+-else()
+-    message(WARNING "Could not find the unrar executable. Ark requires unrar or unar to extract RAR archives.")
+-endif()
+-
+-find_program(RAR rar)
+-if(RAR)
+-    message(STATUS "Found rar executable: ${RAR}")
+-else()
+-    message(WARNING "Could not find the rar executable. Ark won't be able to create or edit RAR archives.")
+-endif()
+diff -up ark-23.04.0/plugins/libarchive/CMakeLists.txt.orig ark-23.04.0/plugins/libarchive/CMakeLists.txt
+--- ark-23.04.0/plugins/libarchive/CMakeLists.txt.orig	2023-04-12 18:14:03.000000000 +0200
++++ ark-23.04.0/plugins/libarchive/CMakeLists.txt	2023-04-21 14:19:37.662623565 +0200
+@@ -48,24 +48,3 @@ set(INSTALLED_LIBARCHIVE_PLUGINS "${INST
+ set(INSTALLED_LIBARCHIVE_PLUGINS "${INSTALLED_LIBARCHIVE_PLUGINS}kerfuffle_libarchive;")
+ 
+ set(INSTALLED_KERFUFFLE_PLUGINS "${INSTALLED_KERFUFFLE_PLUGINS}${INSTALLED_LIBARCHIVE_PLUGINS}" PARENT_SCOPE)
+-
+-find_program(LRZIP lrzip)
+-if(LRZIP)
+-    message(STATUS "Found lrzip executable: ${LRZIP}")
+-else()
+-    message(WARNING "Could not find the lrzip executable. Ark requires lrzip to handle the tar.lrz archive format.")
+-endif()
+-
+-find_program(LZOP lzop)
+-if(LZOP)
+-    message(STATUS "Found lzop executable: ${LZOP}")
+-else()
+-    message(WARNING "Could not find the lzop executable. Ark requires lzop to handle the tar.lzo archive format if libarchive >= 3.3 has been compiled without liblzo2 support.")
+-endif()
+-
+-find_program(ZSTD zstd)
+-if(ZSTD)
+-    message(STATUS "Found zstd executable: ${ZSTD}")
+-else()
+-    message(WARNING "Could not find the zstd executable. Ark requires zstd to handle the tar.zst archive format if libarchive >= 3.3.3 has been compiled without libzstd support.")
+-endif()
