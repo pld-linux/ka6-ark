@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		qtver		5.15.2
 %define		kaname		ark
 Summary:	Ark
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	4ddddb24bf5857e2d83cc9f21c9de5ab
+# Source0-md5:	daec28b797eb35c840fd0d43dad5ab00
 Patch0:		no-programs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
