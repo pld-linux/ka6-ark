@@ -113,6 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_libzip.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/compressfileitemaction.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/extractfileitemaction.so
+%dir %{_libdir}/qt6/plugins/kf6/kio_dnd
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio_dnd/extracthere.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/arkpart.so
 %{_desktopdir}/org.kde.ark.desktop
