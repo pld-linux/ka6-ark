@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.3
+%define		kdeappsver	25.04.0
 %define		qtver		5.15.2
 %define		kaname		ark
 Summary:	Ark
 Name:		ka6-%{kaname}
-Version:	24.12.3
+Version:	25.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	227451c5a60d4e17d00a732ef56dc226
+# Source0-md5:	a8dd7fbb74f28360fc521d62a60db0cc
 Patch0:		no-programs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
@@ -100,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 /etc/xdg/arkrc
 %attr(755,root,root) %{_bindir}/ark
-%{_libdir}/libkerfuffle.so.24
+%ghost %{_libdir}/libkerfuffle.so.2?
 %attr(755,root,root) %{_libdir}/libkerfuffle.so.*.*
 %dir %{_libdir}/qt6/plugins/kerfuffle
 %attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_cli7z.so
