@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.04.3
+%define		kdeappsver	25.08.0
 %define		qtver		5.15.2
 %define		kaname		ark
 Summary:	Ark
 Name:		ka6-%{kaname}
-Version:	25.04.3
+Version:	25.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	df6c84018b101075ae30f1f14f8b540e
+# Source0-md5:	1c3b55f3abf2acd7c01f3e0456fd0696
 Patch0:		no-programs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
@@ -128,8 +128,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/48x48/apps/ark.png
 %{_iconsdir}/hicolor/64x64/apps/ark.png
 %{_iconsdir}/hicolor/scalable/apps/ark.svgz
-%{_datadir}/kconf_update/ark.upd
-%{_datadir}/kconf_update/ark_add_hamburgermenu_to_toolbar.sh
 %{_mandir}/ca/man1/ark.1*
 %{_mandir}/es/man1/ark.1*
 %{_mandir}/fr/man1/ark.1*
