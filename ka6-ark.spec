@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		qtver		5.15.2
 %define		kaname		ark
 Summary:	Ark
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	230f2c985673116e5d9553bed49ca9df
+# Source0-md5:	b953aaf3966fe71a2720f89a70abf285
 Patch0:		no-programs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
@@ -108,21 +108,21 @@ rm -rf $RPM_BUILD_ROOT
 /etc/xdg/arkrc
 %attr(755,root,root) %{_bindir}/ark
 %ghost %{_libdir}/libkerfuffle.so.2?
-%attr(755,root,root) %{_libdir}/libkerfuffle.so.*.*
+%{_libdir}/libkerfuffle.so.*.*
 %dir %{_libdir}/qt6/plugins/kerfuffle
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_cli7z.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_cliarj.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_clirar.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_cliunarchiver.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_clizip.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_libarchive.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_libarchive_readonly.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kerfuffle/kerfuffle_libzip.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/compressfileitemaction.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/extractfileitemaction.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_cli7z.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_cliarj.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_clirar.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_cliunarchiver.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_clizip.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_libarchive.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_libarchive_readonly.so
+%{_libdir}/qt6/plugins/kerfuffle/kerfuffle_libzip.so
+%{_libdir}/qt6/plugins/kf6/kfileitemaction/compressfileitemaction.so
+%{_libdir}/qt6/plugins/kf6/kfileitemaction/extractfileitemaction.so
 %dir %{_libdir}/qt6/plugins/kf6/kio_dnd
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio_dnd/extracthere.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/parts/arkpart.so
+%{_libdir}/qt6/plugins/kf6/kio_dnd/extracthere.so
+%{_libdir}/qt6/plugins/kf6/parts/arkpart.so
 %{_desktopdir}/org.kde.ark.desktop
 %{_datadir}/config.kcfg/ark.kcfg
 %{_iconsdir}/hicolor/128x128/apps/ark.png
