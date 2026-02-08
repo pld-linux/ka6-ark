@@ -7,7 +7,7 @@
 Summary:	Ark
 Name:		ka6-%{kaname}
 Version:	25.12.2
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -27,6 +27,7 @@ BuildRequires:	kf6-kconfig-devel >= 5.38.0
 BuildRequires:	kf6-kcrash-devel >= 5.38.0
 BuildRequires:	kf6-kdbusaddons-devel >= 5.38.0
 BuildRequires:	kf6-kdoctools-devel >= 5.38.0
+BuildRequires:	kf6-kfilemetadata-devel >= 6.3.0
 BuildRequires:	kf6-ki18n-devel >= 5.38.0
 BuildRequires:	kf6-kiconthemes-devel >= 5.38.0
 BuildRequires:	kf6-kio-devel >= 5.38.0
