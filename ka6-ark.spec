@@ -1,17 +1,17 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		qtver		5.15.2
 %define		kaname		ark
 Summary:	Ark
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d716cf45066ca14705e7227267c31e08
+# Source0-md5:	8623d1926d799eb2472142026d9eb3d9
 Patch0:		no-programs.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Concurrent-devel
@@ -131,6 +131,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/64x64/apps/ark.png
 %{_iconsdir}/hicolor/scalable/apps/ark.svgz
 %{_mandir}/ca/man1/ark.1*
+%{_mandir}/de/man1/ark.1*
 %{_mandir}/es/man1/ark.1*
 %{_mandir}/fr/man1/ark.1*
 %{_mandir}/gl/man1/ark.1*
@@ -146,3 +147,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/uk/man1/ark.1*
 %{_datadir}/metainfo/org.kde.ark.appdata.xml
 %{_datadir}/qlogging-categories6/ark.categories
+%attr(755,root,root) %{_datadir}/kconf_update/ark_move_dirhistory_to_state_config.py
+%{_datadir}/kconf_update/ark_move_dirhistory_to_state_config.upd
